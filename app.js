@@ -17,7 +17,7 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
-mongoose.connect('localhost:27017/toshi');
+mongoose.connect('mongodb://matt:hawaii@ds153637.mlab.com:53637/heroku_sqjz9vmr');
 require('./config/passport');
 
 // view engine setup
