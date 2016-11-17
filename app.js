@@ -17,7 +17,8 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
-mongoose.connect('mongodb://matt:hawaii@ds153637.mlab.com:53637/heroku_sqjz9vmr');
+var url = process.env.MONGODB_URI;
+mongoose.connect(url);
 require('./config/passport');
 
 // view engine setup
