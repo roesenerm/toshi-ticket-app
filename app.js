@@ -17,7 +17,7 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
-var url = process.env.MONGODB_URI;
+var url = process.env.MONGODB_URI || 'mongodb://localhost/toshi';
 mongoose.connect(url);
 require('./config/passport');
 
